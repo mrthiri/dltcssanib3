@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Perspective</title>
+        <style type="text/css">
+            *{
+                perspective: 600px;
+            }
+            body{
+                height: 100vh;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .container{
+                width: 500px;
+               
+            }
+
+            .div1{
+                width: 250px;
+                height: 100px;
+                background: linear-gradient(silver,grey);
+                border: 1px solid black;
+                box-shadow: -5px 0 10px rgba(0,0,0,0.4);
+
+                padding: 10px;
+                margin: auto;
+
+                position: relative;
+            }
+
+            .div5{
+                width: 200px;
+                height: 100px;
+                background: linear-gradient(silver,grey);
+                border: 1px solid black;
+                box-shadow: -5px 0 10px rgba(0,0,0,0.4);
+
+                padding: 50px;
+
+                transform: rotateX(45deg);
+
+                position: absolute;
+                top: -100%;
+                left: -20px;
+
+                z-index: 1;
+
+            }
+
+            .div2{
+               width: 50px;
+               height: 100px;
+               background-color: #fff;
+               border: 1px solid black;
+
+               position: absolute;
+               top: 20px;
+               left: 50%;
+
+               transform-origin: right bottom;
+               transform: rotateY(50deg);
+
+               transition: all 0.5s;
+
+              
+            }
+
+            .div2:hover{
+                transform: rotateY(0deg);
+            }
+
+            .div3{
+                width: 50px;
+                height: 100px;
+                background-color: #fff;
+                border: 1px solid black;
+
+                position: absolute;
+                top: 20px;
+                left: 85px;
+
+                transform-origin: left bottom;
+                transform: rotateY(0deg);
+
+                transition: all 0.5s;
+               
+            }
+
+            .div3:hover{
+                transform: rotateY(-50deg);
+            }
+
+            .div4{
+                width: 40px;
+                height:  72px;
+                background: rgba(0,0,0,0.3);
+        
+                 
+                position: absolute;
+                top:  50px;
+                left: 120px;
+
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="div1">DIV1
+                <div  class="div2">DIV2</div>
+                <div  class="div3">DIV3</div>
+                <div  class="div4"></div>
+                <div  class="div5">DIV5</div>
+            </div>
+        </div>
+    </body>
+</html>

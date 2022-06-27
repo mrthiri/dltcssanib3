@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Button Effect</title>
+    </head>
+    <style type="text/css">
+      body{
+          font-family: sans-serif;
+          background: #000;
+          height: 100vh;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+
+      a{
+          display: block;
+          text-decoration: none;
+          background: transparent;
+          color: #fff;
+          font-size: 40px;
+          border: 5px solid #fff;
+          padding: 40px 80px;
+
+          margin-bottom: 20px;
+
+          position: relative;
+      }
+
+      a::before{
+          content: '';
+
+          width: 100%;
+          height: 30%;
+          background: #fff;
+          border-radius: 0 0 100% 0;
+
+          position: absolute;
+          left: 0;
+          top: 0;
+
+          z-index: -1;
+
+          transition: all 0.5s;
+      }
+
+      a:hover::before{
+          height: 100%;
+          border-radius: 0 0 0 100%;
+      }
+
+      a:hover{
+          color: #000;
+      }
+
+      button{
+          background:  transparent;
+          font-size: 40px;
+          color: #fff;
+          padding: 40px 80px;
+          border: 5px solid #fff;
+
+          position: relative;
+      }
+
+      button::before{
+         content: '';
+         width: 100%;
+         height: 100%;
+         background: linear-gradient(
+             90deg,
+            red 40%,
+            transparent 70%
+         );
+
+         position: absolute;
+         left: 0;
+         top: 0;
+
+         z-index: -1;
+
+         display: flex;
+         justify-content: center;
+         align-items: center;
+
+         transition: all 0.5s;
+      }
+
+      button::after{
+          content: '';
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(
+              270deg,
+           steelblue 40%,
+           transparent 70%
+          );
+
+          position: absolute;
+          left: 0;
+          top: 0;
+
+          z-index: -1;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          transition: all 0.5s;
+      }
+
+      button:hover::before{
+          background: linear-gradient(
+              270deg,
+              red 40%,
+              transparent 70%
+          )
+      }
+
+      button:hover::after{
+          background: linear-gradient(
+              90deg,
+              steelblue 40%,
+              transparent 70%
+          )
+      }
+    </style>
+    <body>
+
+       <div>
+          <a href="#">Hover Me</a>
+          <button type="button">Hover Me</button>
+       </div>
+
+    </body>
+</html>
